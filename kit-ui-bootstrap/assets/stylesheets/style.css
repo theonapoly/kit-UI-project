@@ -212,7 +212,7 @@ color: #262626;
   
 
 
-/* CARDS COLOR =======================================================================*/
+/* CARDS INDEX =======================================================================*/
 
 .container-card{
     display: flex;
@@ -232,38 +232,28 @@ color: #262626;
   }
 
 .card {
-    background-color: #f8f8f8;
+    background-color: #f7f2e2;
     border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
     overflow: hidden;
     width: 350px;
     height: 350px;
     }
+
+.card a{
+  color: rgb(79, 78, 78); 
+  }
   
-.card-bg-1 {
-    background-color: #ccb068;
-    height: 250px;
-    }
-  
-.card-bg-2 {
-    background-color: #262626;
+.card-bg{
+    margin: 5px;
+    border-radius: 20px;
     height: 250px;
     }
 
-.card-bg-3 {
-    background-color: #131212;
-    height: 250px;
-    }
-
-.card-bg-4 {
-    background-color: #d4d3d3;
-    height: 250px;
-    }
-
-.card-bg-5 {
-    background-color: #ececec;
-    height: 250px;
-    }
+.card-bg img{
+  background-size: cover;
+  border-radius: 20px;
+}
 
 .card-content {
     padding: 20px;
@@ -515,14 +505,20 @@ color: ;
 }
 
 /* CARDS EVENTS =======================================================================*/
+.profile-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Deux colonnes pour les cards */
+  gap: 10px; /* Espacement entre les cards */
+  width: 100%;
+  margin-bottom: 10vh;
+}
 
 .profile {
   position: relative;
-  background: var(--backgroundColor);
-  color: var(--foregroundColor);
-  box-shadow: 0 3px 15px rgba(51, 51, 51, 0.2);
+  background: #fdf6e3;
+  color:#3c3e3f;
+  box-shadow: 0 3px 15px rgba(55, 51, 51, 0.2);
   border-radius: 10px;
-  transition: 0.2s ease;
 }
 .profile__image img {
   width: 100%;
@@ -530,47 +526,50 @@ color: ;
   object-fit: cover;
 }
 .profile__stats__title {
-  color: green;
+  color: #073642;
   text-transform: uppercase;
   font-size: 16px;
 }
 .profile a:hover {
   top: 0;
   box-shadow: none;
-  background: yellow;
 }
 .profile a:active, .profile a:focus {
   top: 0;
   box-shadow: none;
-  background: yellow;
 }
 
 /* profil-default -------------------------------------*/
 .profile-default {
-  min-width: 400px;
-  max-width: 450px;
+  min-width: 340px;
+  max-width: 400px;
+  max-height: 600px;
   margin: auto;
   overflow: hidden;
   display: grid;
-  grid: 340px auto auto/repeat(3, minmax(80px, 1fr));
+  justify-content: center;
+  align-items: center;
+  grid: 280px auto auto/repeat(3, minmax(80px, 1fr));
   grid-gap: 10px;
 }
 .profile-default .profile__image {
+  height: 280px;
   grid-column: span 3;
 }
 .profile-default .profile__image img {
-  border-bottom: 7px solid rgb(236, 8, 8);
+  border-bottom: 7px solid #073642;
 }
 .profile-default .profile__info {
+  height: 130px;
   grid-column: span 3;
-  margin: 20px 25px 0;
+  margin: 15px 15px 0;
 }
 .profile-default .profile__stats {
-  margin: 5px 25px;
+  margin: 0 20px 10px 20px;
 }
 .profile-default .profile__cta {
   grid-column: span 3;
-  margin: 0 25px 25px;
+  margin: 0 100px 10px;
 }
 
 /* profil-smallimg -------------------------------------*/
@@ -590,20 +589,21 @@ color: ;
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 5px solid red;
+  border: 5px solid #073642;
   box-shadow: 0 0 0 7px white;
 }
 .profile-smallimg .profile__info {
   margin: 10px 30px 15px;
 }
 .profile-smallimg .profile__stats {
-  margin: 0 30px 10px;
+  margin: 0 20px 0px;
 }
 .profile-smallimg .profile__stats:nth-of-type(n + 4) {
   display: none;
 }
-.profile-smallimg .profile__cta a {
-  border-radius: 0 0 10px 10px;
+.profile-smallimg button{
+  margin: 0 10px 20px 10px;
+  border-radius: 100px 100px 100px 100px;
 }
 
 /* profil-table -------------------------------------*/
